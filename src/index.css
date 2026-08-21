@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-tablet: 800px;
+  --breakpoint-small: 460px;
+
+  /* Color Palette - Strict Light Neomorphism */
+  --color-bg: #e8ecf1;
+  --color-surface: #eef1f5;
+  --color-surface-deep: #e3e9f0;
+  --color-ink: #252a34;
+  --color-muted: #68707d;
+  --color-faint: #8b929d;
+  --color-accent: #4f6ef7;
+  --color-accent-dark: #3b56c8;
+  --color-accent-soft: #dce4ff;
+  --color-line: rgba(160, 174, 192, 0.25);
+
+  /* Typography */
+  --font-sans: 'Manrope', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --font-signature: 'Great Vibes', cursive;
+
+  /* Radii */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Neomorphic Depth System (Consistent Top-Left ↖ Light Source) */
+  --shadow-raised-lg: 14px 14px 28px #b4c2d4, -14px -14px 28px #ffffff;
+  --shadow-raised: 9px 9px 20px #b8c6d7, -9px -9px 20px #ffffff;
+  --shadow-raised-sm: 5px 5px 12px #bdcada, -5px -5px 12px #ffffff;
+  --shadow-raised-hover: 12px 12px 24px #b2c0d2, -12px -12px 24px #ffffff;
+
+  /* High-Realism Concave Inset Depth System (Matching Reference Image Physics) */
+  --shadow-inset-sm: inset 3px 3px 6px #b4c3d4, inset -3px -3px 6px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.65);
+  --shadow-inset: inset 5px 5px 11px #adbdce, inset -5px -5px 11px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.75);
+  --shadow-inset-deep: inset 7px 7px 15px #a5b5c8, inset -7px -7px 15px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.85);
+  --shadow-inset-focus: inset 5px 5px 10px #a4b3c8, inset -5px -5px 10px #ffffff, 0 0 0 3px rgba(79, 110, 247, 0.22);
+  --shadow-accent-raised: 6px 6px 14px rgba(60, 85, 195, 0.42), -6px -6px 14px rgba(255, 255, 255, 0.7);
+  --shadow-accent-pressed: inset 4px 4px 9px rgba(35, 52, 128, 0.48), inset -4px -4px 9px rgba(130, 155, 255, 0.55);
+}
+
+:root {
+  --color-bg: #e8ecf1;
+  --color-surface: #eef1f5;
+  --color-surface-deep: #e3e9f0;
+  --color-ink: #252a34;
+  --color-muted: #68707d;
+  --color-faint: #8b929d;
+  --color-accent: #4f6ef7;
+  --color-accent-dark: #3b56c8;
+  --color-accent-soft: #dce4ff;
+
+  --shadow-raised-lg: 14px 14px 28px #b4c2d4, -14px -14px 28px #ffffff;
+  --shadow-raised: 9px 9px 20px #b8c6d7, -9px -9px 20px #ffffff;
+  --shadow-raised-sm: 5px 5px 12px #bdcada, -5px -5px 12px #ffffff;
+  --shadow-raised-hover: 12px 12px 24px #b2c0d2, -12px -12px 24px #ffffff;
+
+  --shadow-inset-sm: inset 3px 3px 6px #b4c3d4, inset -3px -3px 6px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.65);
+  --shadow-inset: inset 5px 5px 11px #adbdce, inset -5px -5px 11px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.75);
+  --shadow-inset-deep: inset 7px 7px 15px #a5b5c8, inset -7px -7px 15px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.85);
+  --shadow-inset-focus: inset 5px 5px 10px #a4b3c8, inset -5px -5px 10px #ffffff, 0 0 0 3px rgba(79, 110, 247, 0.22);
+
+  /* Motion Custom Tokens */
+  --ease-neomorphic: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  section { scroll-margin-top: 88px; }
+  body { @apply m-0 overflow-x-hidden bg-bg font-sans text-[15px] leading-[1.65] text-ink antialiased; }
+  button, input, textarea { font: inherit; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  button { @apply cursor-pointer border-0; }
+  a { @apply text-inherit no-underline; }
+  button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid rgba(79, 110, 247, 0.35); outline-offset: 3px; }
+}
+
+@layer components {
+  .mini-grid { background-image: linear-gradient(var(--color-accent) 1px, transparent 1px), linear-gradient(90deg, var(--color-accent) 1px, transparent 1px); background-size: 6px 6px; }
+
+  /* Tactile Neomorphic Utilities */
+  .neo-transition {
+    transition: transform var(--duration-fast) var(--ease-neomorphic),
+                box-shadow var(--duration-normal) var(--ease-neomorphic),
+                background-color var(--duration-normal) var(--ease-neomorphic),
+                color var(--duration-fast) var(--ease-neomorphic);
+    will-change: transform, box-shadow;
+  }
+
+  /* Realistic Concave Inset Utilities (Matching Soft Physical Molded Surface) */
+  .neo-inset-sm {
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-inset-sm);
+  }
+
+  .neo-inset {
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-inset);
+  }
+
+  .neo-inset-deep {
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-inset-deep);
+  }
+
+  .neo-pressed {
+    background-color: var(--color-surface);
+    box-shadow: inset 4px 4px 9px #adbdce, inset -4px -4px 9px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.65);
+  }
+
+  /* Procedural Watercolor Sakura Petals CSS */
+  .sakura-petal {
+    display: inline-block;
+    border-radius: 65% 35% 70% 30% / 55% 65% 35% 45%;
+    background: linear-gradient(135deg, rgba(155, 185, 255, 0.82) 0%, rgba(79, 110, 247, 0.68) 55%, rgba(195, 215, 255, 0.45) 100%);
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.85), 0 2px 4px rgba(79, 110, 247, 0.18);
+  }
+
+  .sakura-petal-sm {
+    width: 7px;
+    height: 9px;
+  }
+
+  .sakura-petal-md {
+    width: 10px;
+    height: 13px;
+  }
+
+  .sakura-petal-lg {
+    width: 13px;
+    height: 17px;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *:not(.sakura-petal-container):not(.sakura-petal),
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Custom Cursor Desktop Pointer Rule */
+@media (pointer: fine) {
+  body, a, button, [role="button"], label {
+    cursor: none;
+  }
+  input, textarea, select {
+    cursor: text;
+  }
+}
+
+/* Smooth Global Scroll Behavior & Firefox Scrollbar Fallback */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #6088ff rgba(232, 236, 241, 0.65);
+}
+
+/* Light Neomorphic WebKit Custom Scrollbar (Chromium, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(232, 236, 241, 0.65);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #789bff 0%, #4f6ef7 60%, #6088ff 100%);
+  border-radius: 999px;
+  border: 2px solid rgba(232, 236, 241, 0.7);
+  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.9), 0 2px 8px rgba(79, 110, 247, 0.35);
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #88abff 0%, #3b5edb 60%, #7098ff 100%);
+  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.95), 0 2px 12px rgba(79, 110, 247, 0.5);
+}
+
+
+
+
+
+
+
