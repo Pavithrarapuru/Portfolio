@@ -39,8 +39,9 @@ const skills = [
   { name: 'React.js', category: 'Frontend', icon: Monitor },
 
   // Backend
-  { name: 'FastAPI', category: 'Backend Development', icon: Server },
-  { name: 'RESTful APIs', category: 'Backend Development', icon: Globe },
+  { name: 'Python', category: 'Backend Development', icon: Terminal },
+{ name: 'FastAPI', category: 'Backend Development', icon: Server },
+{ name: 'RESTful APIs', category: 'Backend Development', icon: Globe },
 
   // AI & GenAI
   { name: 'Generative AI', category: 'AI & GenAI', icon: Brain },
