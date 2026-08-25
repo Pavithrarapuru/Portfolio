@@ -28,18 +28,26 @@ function Skills() {
         />
       </Reveal>
 
-      <div className="space-y-10">
+      <div className="space-y-8">
         {Object.entries(groupedSkills).map(([category, categorySkills]) => (
-          <div key={category}>
-            <h3 className="mb-4 text-lg font-semibold">
+          <div
+            key={category}
+            className="rounded-2xl border border-white/10 p-6"
+          >
+            {/* Category heading */}
+            <h3 className="mb-5 text-lg font-semibold">
               {category}
             </h3>
 
-            <div className="grid grid-cols-3 gap-5 max-tablet:grid-cols-2 max-small:grid-cols-1">
+            {/* Skills inside the category block */}
+            <div className="grid grid-cols-3 gap-4 max-tablet:grid-cols-2 max-small:grid-cols-1">
               {categorySkills.map((skill, index) => (
                 <SkillCard
                   key={skill.name}
-                  skill={skill}
+                  skill={{
+                    ...skill,
+                    category: '',
+                  }}
                   delay={index * 0.05}
                 />
               ))}
