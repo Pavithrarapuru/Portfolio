@@ -32,6 +32,49 @@ const skills = [
 { name: 'LLD', category: 'System Design', icon: Layers3 },
 { name: 'HLD', category: 'System Design', icon: Layers3 },
 
+// Enterprise Technologies
+
+{ 
+  name: 'Verint',
+  category: 'Enterprise Technologies',
+  icon: Building2,
+},
+
+{ 
+  name: 'WFM',
+  category: 'Verint Modules',
+  parent: 'Verint',
+  icon: Clock,
+},
+
+{ 
+  name: 'OM',
+  category: 'Verint Modules',
+  parent: 'Verint',
+  icon: Settings,
+},
+
+{ 
+  name: 'QM',
+  category: 'Verint Modules',
+  parent: 'Verint',
+  icon: ClipboardCheck,
+},
+
+{ 
+  name: 'DPA',
+  category: 'Verint Modules',
+  parent: 'Verint',
+  icon: BarChart3,
+},
+
+{ 
+  name: 'Speech Analytics',
+  category: 'Verint Modules',
+  parent: 'Verint',
+  icon: BarChart3,
+},
+
   // Frontend
   { name: 'HTML5', category: 'Frontend', icon: Monitor },
   { name: 'Tailwind CSS', category: 'Frontend', icon: Palette },
@@ -70,12 +113,7 @@ const skills = [
   { name: 'Jenkins', category: 'DevOps', icon: Settings },
 
   // Enterprise
-  { name: 'Verint', category: 'Enterprise Technologies', icon: Building2 },
-  { name: 'WFM', category: 'Verint Enterprise', icon: Clock },
-  { name: 'OM', category: 'Verint Enterprise', icon: Settings },
-  { name: 'QM', category: 'Verint Enterprise', icon: ClipboardCheck },
-  { name: 'DPA', category: 'Verint Enterprise', icon: BarChart3 },
-
+  
   // Tools
   { name: 'Git', category: 'Development Tools', icon: GitBranch },
   { name: 'GitHub', category: 'Development Tools', icon: Code2 },
