@@ -34,8 +34,7 @@ const profile = {
     'I enjoy turning curiosity into things that work — from Python applications and enterprise systems to intelligent solutions powered by AI.',
 
   lead:
-    "My journey has taken me from Python and problem solving to building enterprise applications, working with Verint technologies, and now exploring Generative AI, LLMs, RAG, and agentic systems.",
-
+  "My journey has evolved from Python and problem solving to enterprise engineering with Verint, and now to building real-world GenAI applications by integrating LLMs, RAG, and agentic systems into practical solutions.",
   detail:
     "I’m always curious about how things work, how they can be improved, and where technology can make a real difference. I enjoy learning, experimenting, and turning ideas into practical solutions.",
 },
