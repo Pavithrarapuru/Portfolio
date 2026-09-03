@@ -5,24 +5,40 @@ import profilePlaceholder from '../assets/pavithra_profiled.png'
 export const navItems = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact']
 
 const profile = {
+
   name: 'Pavithra',
+
   hero: {
-    availability: 'Available for new opportunities',
-    titleBefore: 'Ideas into ',
-    titleEmphasis: 'useful',
-    titleAfter: 'digital experiences.',
-    description: "Hi, I'm Pavithra. I'm a developer who enjoys turning thoughtful ideas into clear, dependable products.",
-    status: 'Open to collaboration',
+    availability: 'Building the next layer of intelligent software',
+
+    titleBefore: 'From ',
+    titleEmphasis: 'code',
+    titleAfter: ' to intelligent systems.',
+
+    description:
+      "I'm Pavithra, a Software Engineer exploring the intersection of Python, enterprise systems, and Generative AI. I build practical applications with LLMs, RAG, agentic approaches, and automation to turn ideas into real-world solutions.",
+
+    status: 'Software Engineer • GenAI • LLMs',
+
     location: 'Based in India',
+
     image: profilePlaceholder,
   },
-  about: {
-    eyebrow: 'A little context',
-    title: 'Built with curiosity.\nShaped by care.',
-    copy: 'I believe the best digital experiences sit at the intersection of clear thinking, thoughtful design, and solid engineering.',
-    lead: "I'm early in my journey, but serious about the craft. I like asking why, learning how things work, and making the final result feel considered.",
-    detail: "When I'm away from the screen, I'm usually collecting small observations, learning something new, or finding a better way to explain an idea.",
-  },
+
+ about: {
+  eyebrow: 'Beyond the code',
+
+  title: 'Curious by nature.\nBuilding with purpose.',
+
+  copy:
+    'I enjoy turning curiosity into things that work — from Python applications and enterprise systems to intelligent solutions powered by AI.',
+
+  lead:
+    "My journey has taken me from Python and problem solving to building enterprise applications, working with Verint technologies, and now exploring Generative AI, LLMs, RAG, and agentic systems.",
+
+  detail:
+    "I’m always curious about how things work, how they can be improved, and where technology can make a real difference. I enjoy learning, experimenting, and turning ideas into practical solutions.",
+},
   footer: 'Thoughtful code for useful things.',
 }
 
