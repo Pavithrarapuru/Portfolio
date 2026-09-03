@@ -8,23 +8,23 @@ function About() {
   const { about } = profile
   const reduceMotion = useReducedMotion()
 
-  const highlights = [
-    {
-      icon: GraduationCap,
-      label: 'Currently learning',
-      title: 'Building better products',
-    },
-    {
-      icon: BriefcaseBusiness,
-      label: 'Focus',
-      title: 'Frontend & problem solving',
-    },
-    {
-      icon: Heart,
-      label: 'Belief',
-      title: 'Details make the difference',
-    },
-  ]
+ const highlights = [
+  {
+    icon: GraduationCap,
+    label: 'Curiosity',
+    title: 'Exploring what AI can make possible',
+  },
+  {
+    icon: BriefcaseBusiness,
+    label: 'Approach',
+    title: 'Think clearly. Solve deeply. Design to scale.',
+  },
+  {
+    icon: Heart,
+    label: 'Purpose',
+    title: 'Building technology that feels useful',
+  },
+]
 
   return (
     <section id="about" data-label="About" className="mx-auto max-w-[1140px] px-6 py-16 max-tablet:px-4 max-tablet:py-12">
