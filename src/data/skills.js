@@ -26,10 +26,11 @@ import {
 
 const skills = [
   // Core Language & Problem Solving
-  { name: 'Python', category: 'Core Language & OOPs', icon: Terminal },
-  { name: 'OOPs', category: 'Core Language & OOPs', icon: Code2 },
-  { name: 'DSA', category: 'Problem Solving with Python', icon: Code2 },
-  { name: 'LLD', category: 'System Design', icon: Layers3 },
+{ name: 'Python', category: 'Core Language', icon: Terminal },
+{ name: 'OOPs', category: 'Core Language', icon: Code2 },
+{ name: 'DSA', category: 'Problem Solving with Python', icon: Code2 },
+{ name: 'LLD', category: 'System Design', icon: Layers3 },
+{ name: 'HLD', category: 'System Design', icon: Layers3 },
 
   // Frontend
   { name: 'HTML5', category: 'Frontend', icon: Monitor },
