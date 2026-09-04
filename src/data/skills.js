@@ -25,55 +25,12 @@ import {
 } from 'lucide-react'
 
 const skills = [
-  // Core Language & Problem Solving
-{ name: 'Python', category: 'Core Language', icon: Terminal },
-{ name: 'OOPs', category: 'Core Language', icon: Code2 },
-{ name: 'DSA', category: 'Problem Solving with Python', icon: Code2 },
-{ name: 'LLD', category: 'System Design', icon: Layers3 },
-{ name: 'HLD', category: 'System Design', icon: Layers3 },
-
-// Enterprise Technologies
-
-{ 
-  name: 'Verint',
-  category: 'Enterprise Technologies',
-  icon: Building2,
-},
-
-{ 
-  name: 'WFM',
-  category: 'Verint Modules',
-  parent: 'Verint',
-  icon: Clock,
-},
-
-{ 
-  name: 'OM',
-  category: 'Verint Modules',
-  parent: 'Verint',
-  icon: Settings,
-},
-
-{ 
-  name: 'QM',
-  category: 'Verint Modules',
-  parent: 'Verint',
-  icon: ClipboardCheck,
-},
-
-{ 
-  name: 'DPA',
-  category: 'Verint Modules',
-  parent: 'Verint',
-  icon: BarChart3,
-},
-
-{ 
-  name: 'Speech Analytics',
-  category: 'Verint Modules',
-  parent: 'Verint',
-  icon: BarChart3,
-},
+  // Languages & Core
+  { name: 'Python', category: 'Languages & Core', subcategory: 'Core Language', icon: Terminal },
+  { name: 'OOPs', category: 'Languages & Core', subcategory: 'Object Oriented', icon: Code2 },
+  { name: 'DSA', category: 'Languages & Core', subcategory: 'Problem Solving', icon: Code2 },
+  { name: 'Low Level Design', category: 'Languages & Core', subcategory: 'System Design', icon: Layers3 },
+  { name: 'High Level Design', category: 'Languages & Core', subcategory: 'System Design', icon: Layers3 },
 
   // Frontend
   { name: 'HTML5', category: 'Frontend', icon: Monitor },
@@ -83,9 +40,9 @@ const skills = [
   { name: 'React.js', category: 'Frontend', icon: Monitor },
 
   // Backend
-  { name: 'Python', category: 'Backend Development', icon: Terminal },
-{ name: 'FastAPI', category: 'Backend Development', icon: Server },
-{ name: 'RESTful APIs', category: 'Backend Development', icon: Globe },
+  { name: 'Python', category: 'Backend', subcategory: 'Backend Dev', icon: Terminal },
+  { name: 'FastAPI', category: 'Backend', subcategory: 'Framework', icon: Server },
+  { name: 'RESTful APIs', category: 'Backend', subcategory: 'API Design', icon: Globe },
 
   // AI & GenAI
   { name: 'Generative AI', category: 'AI & GenAI', icon: Brain },
@@ -101,23 +58,28 @@ const skills = [
   { name: 'MongoDB', category: 'Databases', icon: Database },
   { name: 'DynamoDB', category: 'Databases', icon: Database },
 
-  // Cloud
-  { name: 'AWS', category: 'Cloud & Services', icon: Cloud },
-  { name: 'Amazon Lex', category: 'Cloud & Services', icon: Bot },
-  { name: 'AWS Lambda', category: 'Cloud & Services', icon: Zap },
+  // Cloud & DevOps
+  { name: 'AWS', category: 'Cloud & DevOps', subcategory: 'Cloud', icon: Cloud },
+  { name: 'CI/CD', category: 'Cloud & DevOps', subcategory: 'DevOps', icon: GitBranch },
+  { name: 'Github Actions', category: 'Cloud & DevOps', subcategory: 'Automation', icon: GitBranch },
+  { name: 'Docker', category: 'Cloud & DevOps', subcategory: 'Containers', icon: Box },
+  { name: 'Kubernetes', category: 'Cloud & DevOps', subcategory: 'Orchestration', icon: Box },
+  { name: 'Jenkins', category: 'Cloud & DevOps', subcategory: 'Automation', icon: Settings },
 
-  // DevOps
-  { name: 'CI/CD', category: 'DevOps', icon: GitBranch },
-  { name: 'Docker', category: 'DevOps', icon: Box },
-  { name: 'Kubernetes', category: 'DevOps', icon: Box },
-  { name: 'Jenkins', category: 'DevOps', icon: Settings },
+  // Enterprise Technologies
+  { name: 'Verint', category: 'Enterprise Technologies', subcategory: 'Platform', icon: Building2 },
+  { name: 'WFM', category: 'Enterprise Technologies', parent: 'Verint', subcategory: 'Verint Module', icon: Clock },
+  { name: 'OM', category: 'Enterprise Technologies', parent: 'Verint', subcategory: 'Verint Module', icon: Settings },
+  { name: 'QM', category: 'Enterprise Technologies', parent: 'Verint', subcategory: 'Verint Module', icon: ClipboardCheck },
+  { name: 'DPA', category: 'Enterprise Technologies', parent: 'Verint', subcategory: 'Verint Module', icon: BarChart3 },
+  { name: 'Speech Analytics', category: 'Enterprise Technologies', parent: 'Verint', subcategory: 'Verint Module', icon: BarChart3 },
 
-  // Enterprise
-  
-  // Tools
-  { name: 'Git', category: 'Development Tools', icon: GitBranch },
-  { name: 'GitHub', category: 'Development Tools', icon: Code2 },
-  { name: 'Postman', category: 'Development Tools', icon: Send },
+  // Tools & Technologies
+  { name: 'Git', category: 'Tools & Technologies', icon: GitBranch },
+  { name: 'GitHub', category: 'Tools & Technologies', icon: Code2 },
+  { name: 'Postman', category: 'Tools & Technologies', icon: Send },
+  { name: 'Jira', category: 'Tools & Technologies', icon: Settings },
+  { name: 'Bruno', category: 'Tools & Technologies', icon: Send },
 ]
 
 export default skills
