@@ -1,4 +1,4 @@
-import profilePlaceholder from '../assets/pavithra_profiled.png'
+import profilePlaceholder from '../assets/pavithra_profile.png'
 
 
 

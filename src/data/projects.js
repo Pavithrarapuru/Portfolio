@@ -1,38 +1,53 @@
-import projectInterface from '../assets/project-interface.jpg'
+
+import projectInterface from '../assets/Nivi.png'
 import projectData from '../assets/project-data.jpg'
 import projectDashboard from '../assets/project-dashboard.jpg'
 
 const projects = [
   {
     number: '01',
-    title: 'Project placeholder',
-    type: 'Web application',
-    description: 'A focused product space for turning a complex workflow into a clear, useful experience.',
-    tags: ['React', 'JavaScript', 'CSS'],
+    title: 'Nivi Virtual Assistant',
+    type: 'Voice-Based AI Assistant',
+    description:
+      'NIVI is a voice-based virtual assistant built with Python that allows users to interact through voice commands. It can perform tasks like launching applications, generating emails, and fetching real-time information.',
+
+    tags: ['React', 'Python', 'ChatGPT', 'Edge-TTS','REST API', 'Selenium'],
     image: projectInterface,
-    github: '#',
-    demo: '#',
+
+    // Replace these with your actual links
+    github: 'https://github.com/Pavithrarapuru/Virtual_Assistant',
+    demo: 'https://YOUR_DEPLOYMENT_LINK.com',
   },
+
   {
     number: '02',
-    title: 'Project placeholder',
-    type: 'Data experience',
-    description: 'An exploration of calm interfaces, meaningful data, and the small decisions that build trust.',
-    tags: ['Python', 'Data', 'UI'],
+    title: 'Portfolio Website & AWS CI/CD',
+    type: 'Cloud-Hosted Portfolio',
+    description:
+     'A responsive portfolio website deployed on AWS with an automated CI/CD pipeline using GitHub Actions. It uses S3 and CloudFront for secure, fast delivery, with AWS Lambda and DynamoDB powering the serverless contact form.'
+,
+    tags: ['React', 'JavaScript', 'vite','tailwind CSS','GitHub', 'CI/CD', 'AWS'],
     image: projectData,
-    github: '#',
-    demo: '#',
+
+    // Replace these with your actual links
+    github: 'https://github.com/Pavithrarapuru/Portfolio',
+    demo: 'https://YOUR_DEPLOYMENT_LINK.com',
   },
+
   {
     number: '03',
-    title: 'Project placeholder',
-    type: 'Digital product',
-    description: 'A flexible foundation for a polished digital tool, with room for real content and future growth.',
+    title: 'Project Three',
+    type: 'Digital Product',
+    description:
+      'A flexible foundation for a polished digital tool, with room for real content and future growth.',
     tags: ['Node.js', 'API', 'Design'],
     image: projectDashboard,
-    github: '#',
-    demo: '#',
+
+    // Replace these with your actual links
+    github: 'https://github.com/YOUR_USERNAME/project-three',
+    demo: 'https://YOUR_DEPLOYMENT_LINK.com',
   },
 ]
 
 export default projects
+
