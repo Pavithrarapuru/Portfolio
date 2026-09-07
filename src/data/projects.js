@@ -31,7 +31,7 @@ const projects = [
 
     // Replace these with your actual links
     github: 'https://github.com/Pavithrarapuru/Portfolio',
-    demo: 'https://YOUR_DEPLOYMENT_LINK.com',
+    demo: 'https://portfolio-xt16.vercel.app/',
   },
 
   {
