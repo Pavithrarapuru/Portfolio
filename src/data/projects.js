@@ -1,7 +1,7 @@
 
 import projectInterface from '../assets/Nivi.png'
-import projectData from '../assets/project-data.jpg'
-import projectDashboard from '../assets/project-dashboard.jpg'
+import projectData from '../assets/Portfolio.png'
+import projectDashboard from '../assets/Sprynto.png'
 
 const projects = [
   {
@@ -16,7 +16,7 @@ const projects = [
 
     // Replace these with your actual links
     github: 'https://github.com/Pavithrarapuru/Virtual_Assistant',
-    demo: 'https://YOUR_DEPLOYMENT_LINK.com',
+    demo: 'https://nivivirtual-assistant.vercel.app/',
   },
 
   {
@@ -39,12 +39,13 @@ const projects = [
     title: 'Project Three',
     type: 'Digital Product',
     description:
-      'A flexible foundation for a polished digital tool, with room for real content and future growth.',
-    tags: ['Node.js', 'API', 'Design'],
+      'Sprynto is a modern hotel management web application designed to simplify hotel operations and improve the guest experience. It features a responsive React-based interface with secure authentication, booking management, and an intuitive admin dashboard, supported by MongoDB for efficient data management. The application focuses on usability, performance, and scalable frontend architecture.',
+    tags: ['React.js', 'JavaScript', 'MongoDB','UI/UX', 'Database Management'],
+
     image: projectDashboard,
 
     // Replace these with your actual links
-    github: 'https://github.com/YOUR_USERNAME/project-three',
+    github: 'https://github.com/Pavithrarapuru/SPRYNTO',
     demo: 'https://YOUR_DEPLOYMENT_LINK.com',
   },
 ]

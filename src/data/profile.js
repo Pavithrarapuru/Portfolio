@@ -1,44 +1,50 @@
 import profilePlaceholder from '../assets/pavithra_profile.png'
 
-
-
-export const navItems = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact']
+export const navItems = [
+  'Home',
+  'About',
+  'Skills',
+  'Projects',
+  'Experience',
+  'Contact',
+]
 
 const profile = {
-
   name: 'Pavithra',
 
   hero: {
-    availability: 'Building the next layer of intelligent software',
+    availability: 'Building intelligent software for what comes next',
 
     titleBefore: 'From ',
     titleEmphasis: 'code',
     titleAfter: ' to intelligent systems.',
 
     description:
-      "I'm Pavithra, a Software Engineer exploring the intersection of Python, enterprise systems, and Generative AI. I build practical applications with LLMs, RAG, agentic approaches, and automation to turn ideas into real-world solutions.",
+      "I'm Pavithra, a Software Engineer focused on Python, enterprise engineering, and Generative AI. I build intelligent applications using LLMs, RAG, agentic workflows, and automation.",
 
-    status: 'Software Engineer • GenAI • LLMs',
+    status: 'Software Engineer • Python • GenAI',
 
     location: 'Based in India',
 
     image: profilePlaceholder,
   },
 
- about: {
-  eyebrow: 'Beyond the code',
+  about: {
+    eyebrow: 'Beyond the code',
 
-  title: 'Curious by nature.\nBuilding with purpose.',
+    title: 'Engineering intelligence.\nBuilding with purpose.',
 
-  copy:
-    'I enjoy turning curiosity into things that work — from Python applications and enterprise systems to intelligent solutions powered by AI.',
+    copy:
+      'I build software at the intersection of Python, enterprise engineering, and Generative AI.',
 
-  lead:
-  "My journey has evolved from Python and problem solving to enterprise engineering with Verint, and now to building real-world GenAI applications by integrating LLMs, RAG, and agentic systems into practical solutions.",
-  detail:
-    "I’m always curious about how things work, how they can be improved, and where technology can make a real difference. I enjoy learning, experimenting, and turning ideas into practical solutions.",
-},
-  footer: 'Thoughtful code for useful things.',
+    lead:
+      'My journey spans Python development, enterprise engineering with Verint, and AI-driven application development using LLMs, RAG, embeddings, and agentic workflows.',
+
+    detail:
+      'I focus on building reliable software and exploring intelligent solutions that solve real-world problems.',
+  },
+
+  footer: 'Engineering software. Exploring intelligence.',
 }
 
 export default profile
