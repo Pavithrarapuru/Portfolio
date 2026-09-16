@@ -34,13 +34,13 @@ const projects = [
     demo: 'https://portfolio-xt16.vercel.app/',
   },
 
-  {
-    number: '03',
-    title: 'Project Three',
-    type: 'Digital Product',
-    description:
-      'Sprynto is a modern hotel management web application designed to simplify hotel operations and improve the guest experience. It features a responsive React-based interface with secure authentication, booking management, and an intuitive admin dashboard, supported by MongoDB for efficient data management. The application focuses on usability, performance, and scalable frontend architecture.',
-    tags: ['React.js', 'JavaScript', 'MongoDB','UI/UX', 'Database Management'],
+{
+  number: '03',
+  title: 'Sprynto — Hotel Management',
+  type: 'Web Application',
+  description:
+    'A modern hotel management web application focused on streamlined bookings, intuitive administration, and a seamless user experience. Built with a responsive React interface and MongoDB for efficient data management.',
+  tags: ['React.js', 'JavaScript', 'MongoDB', 'UI/UX', 'Database Management'],
 
     image: projectDashboard,
 
