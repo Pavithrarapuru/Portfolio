@@ -1,19 +1,63 @@
 import { useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { ArrowUpRight, Check, Send } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 import socialLinks from '../../data/social'
 import Reveal from '../common/Reveal'
 import SectionHeading from '../common/SectionHeading'
 import NeomorphicButton from '../common/NeomorphicButton'
 import SocialLinks from '../common/SocialLinks'
 
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_xkzp94u";
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_r5f36w9";
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "78VmBe9N9pWL5ewIF";
+
 function Contact() {
-  const [sent, setSent] = useState(false)
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [status, setStatus] = useState({ type: null, message: '' })
   const reduceMotion = useReducedMotion()
 
-  const handleSubmit = (event) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    setSent(true)
+
+    const name = formData.name.trim()
+    const email = formData.email.trim()
+    const message = formData.message.trim()
+
+    if (!name || !email || !message) {
+      setStatus({ type: 'error', message: 'Please fill in all three fields.' })
+      return
+    }
+
+    setIsSubmitting(true)
+    setStatus({ type: null, message: '' })
+
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name,
+          email,
+          message,
+        },
+        PUBLIC_KEY
+      )
+
+      setStatus({ type: 'success', message: 'Message sent successfully!' })
+      setFormData({ name: '', email: '', message: '' })
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -45,7 +89,10 @@ function Contact() {
             <input
               className="neo-inset-deep neo-transition w-full rounded-md px-4 py-3 font-sans text-[14px] text-ink outline-none placeholder:text-faint/70 focus:shadow-[var(--shadow-inset-focus)]"
               required
+              name="name"
               type="text"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Your name"
             />
           </label>
@@ -55,7 +102,10 @@ function Contact() {
             <input
               className="neo-inset-deep neo-transition w-full rounded-md px-4 py-3 font-sans text-[14px] text-ink outline-none placeholder:text-faint/70 focus:shadow-[var(--shadow-inset-focus)]"
               required
+              name="email"
               type="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="you@example.com"
             />
           </label>
@@ -65,16 +115,20 @@ function Contact() {
             <textarea
               className="neo-inset-deep neo-transition w-full resize-y rounded-md px-4 py-3 font-sans text-[14px] text-ink outline-none placeholder:text-faint/70 focus:shadow-[var(--shadow-inset-focus)]"
               required
+              name="message"
               rows="4"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Tell me a little about your idea..."
             />
           </label>
 
-
-          <NeomorphicButton className="mt-2 w-full" type="submit">
-            {sent ? (
+          <NeomorphicButton className="mt-2 w-full" type="submit" disabled={isSubmitting}>
+            {isSubmitting ? (
+              "Sending..."
+            ) : status.type === 'success' ? (
               <>
-                Message ready <Check size={17} />
+                Message sent <Check size={17} />
               </>
             ) : (
               <>
@@ -84,15 +138,17 @@ function Contact() {
           </NeomorphicButton>
 
           <AnimatePresence>
-            {sent && (
+            {status.message && (
               <motion.p
-                className="mt-2 text-center font-mono text-[11px] text-accent font-semibold"
+                className={`mt-2 text-center font-mono text-[11px] font-semibold ${
+                  status.type === 'success' ? 'text-accent' : 'text-red-500'
+                }`}
                 initial={reduceMotion ? false : { opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -4 }}
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
               >
-                Thanks! Your message is formatted and ready.
+                {status.message}
               </motion.p>
             )}
           </AnimatePresence>
@@ -103,5 +159,3 @@ function Contact() {
 }
 
 export default Contact
-
-
