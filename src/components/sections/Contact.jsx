@@ -124,7 +124,7 @@ function Contact() {
               onChange={handleChange}
               className="neo-inset-deep neo-transition w-full rounded-md px-4 py-3 font-sans text-[14px] text-ink outline-none placeholder:text-faint/70 focus:shadow-[var(--shadow-inset-focus)]"
               required
-              placeholder="Your name"
+              placeholder="Your Name"
             />
           </label>
 
